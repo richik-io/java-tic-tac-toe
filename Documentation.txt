@@ -1,0 +1,27 @@
+Backend Class:
+The Backend class is responsible for the game logic and data for a Tic Tac Toe game. It contains a 2D array of characters that represents the game board and a character that represents the current player. The game board is initially empty, and the current player is set to 'X'.
+
+Methods:
+
+public boolean placeMark(int row, int col): This method attempts to place the current player's mark at the specified row and column on the game board. If the specified location is already occupied, it returns false and does not change the game state. Otherwise, it places the current player's mark at the specified location and returns true.
+public boolean checkForWin(): This method checks whether the current game board represents a winning state. It returns true if the game is won, false otherwise.
+public boolean checkForTie(): This method checks whether the current game board represents a tie (i.e. full with no winner). It returns true if the game is tied, false otherwise.
+GUI Class:
+The GUI class is responsible for the graphical user interface for a Tic Tac Toe game. It contains a window frame, panels, labels, and buttons for the game. It displays the game board and handles user input.
+
+Methods:
+
+public GUI(Backend backend): This constructor sets up the window and its components. It takes an instance of the Backend class as a parameter.
+public void updateBoard(): This method updates the game board display based on the backend game state.
+public void showGameOverMessage(String message): This method displays a message indicating that the game is over and the result. It takes a message string as a parameter.
+private void handleButtonClick(int row, int col): This method handles a button click at the specified row and column on the game board. It updates the backend game state, updates the game board display, and checks for game over conditions.
+Main Class:
+The Main class is responsible for connecting the Backend and GUI components and starting the game. It creates instances of the Backend and GUI classes, adds the GUI components to the window, and sets up the button listeners to update the game state.
+
+Methods:
+
+public static void main(String[] args): This method starts the game by creating an instance of the Backend class and an instance of the GUI class, and adding the GUI components to the window. It sets up the button listeners to handle user input and game state updates. It also includes methods to update the game board display based on the backend game state and to handle game over conditions.
+
+
+
+
